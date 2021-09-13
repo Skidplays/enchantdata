@@ -1,4 +1,10 @@
 data.txt
 accounts.txt
-envs/
+Include/
+Lib/
+Scripts/
 pyvenv.cfg
+main.spec
+__pycache__/
+build/
+dist/
