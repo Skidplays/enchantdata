@@ -14,7 +14,6 @@ CHARACTER_LINKS = []
 HELMS_LIST = []
 MAX_THREAD = 100
                         
-
 def get_all_accounts(filename: str, json):
     with open(filename, 'w+', encoding='utf-8') as file:
         accounts = json.get('accounts')
@@ -76,16 +75,4 @@ for account, name in zipped_accounts:
 concurrent_run(CHARACTER_LINKS)
 
 write_to_file('data.txt', HELMS_LIST)
-
-# Getting individual characters
-# with open('helmets.txt', 'w+', encoding='utf-8') as file:
-#     for i in trange(len(zipped_accounts)):
-#         helmet = get_individual_character(tuple(zipped_accounts)[i][0], tuple(zipped_accounts)[i][1], 'expedition')
-#         file.write(str(helmet))
 print('Done')
-    
-#print(character_data['items'][0]['itemSlot']) #Loop and check 1 for helmet slot check itemClass 3 for unique 2 for rare
-#print(character_data['items'][8]['itemData']['enchantMods'])
-#print(type(character_data['items'][0]))
-#mylist = [1,1,1,2,2,3,3,3,3,3]
-#c = Counter
